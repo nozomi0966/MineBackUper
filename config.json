@@ -1,6 +1,6 @@
 {
     "directry":{
-        "data": "~/Library/Application Support/minecraft/save",
-        "save": "~/.minecraft"
+        "data": "/Library/Application Support/minecraft/saves/",
+        "save": "/.minecraft"
     }
 }
