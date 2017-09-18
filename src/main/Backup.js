@@ -15,7 +15,7 @@ module.exports = {
         fsex.copySync(savefilename, copyfilename);
         return copyfilename;
     }
-};
+// };
 function getDate(){
     var dt = new Date();
     return dt.getFullYear().toString() + "-" +dt.getMonth().toString() + "-" + dt.getDate().toString()
