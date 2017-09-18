@@ -1,16 +1,52 @@
+body {
+  text-align: center;
+  padding-top: 20px;
+}
+#backuplistli {
+  list-style-type: disc;
+  padding: 5px, 10px;
+  border-bottom:1px solid #84b2e0;
+}
+#backuplist{
+  border-radius :8px;
+  box-shadow :0px 0px 5px silver;
+  padding: 0.5 0.5 0.5 2;
+  width:80%;
+  font-size: 16px;
+  color:#333333;
+  background: #fffcf4;
+  margin: auto;
+  padding-bottom: 5px;
+  list-style-type: none;
+  margin-bottom: 30px;
+}
 select{
-    outline:none;
-    text-indent: 0.01px;
-    text-overflow: '';
-    background: none transparent;
-    vertical-align: middle;
-    font-size: inherit;
-    color: inherit;
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
+  outline:none;
+  text-indent: 0.01px;
+  font-size: inherit;
+  color: inherit;
+  box-shadow :0px 0px 5px silver;
+  width:80%;
+  font-size: 16px;
+  color:#333333;
+  background: #fffcf4;
+  border-radius :8px;
+  margin: auto;
 }
 select option{
-  background-color: #fff;
-  color: #333;
+/* background-color: #fff;
+color: #333; */
+margin: auto;
+}
+#selectbutton{
+box-shadow :0px 0px 5px silver;
+width:80%;
+font-size: 16px;
+color:#333333;
+background: #fffcf4;;
+border-radius :8px;
+margin: auto;
+}
+#backuplisttitle{
+  border-bottom:1px solid #84b2e0;
 }

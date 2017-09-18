@@ -7,15 +7,19 @@ const save_dir = path.join(userHome, config.directry.data);
 const backup_dir = path.join(userHome, config.directry.backup);
 module.exports = {
     getDatas: function(){
-        return fs.readdirSync(save_dir)
+        return fs.readdirSync(save_dir);
     },
     copyData: function(dataname){
-        const copyfilename = backup_dir+"/"+ dataname + +"-"+getDate();
-        const savefilename = backup_dir+"/"+dataname;
+        const copyfilename = backup_dir+"/"+ dataname  +"-"+getDate();
+        const savefilename = save_dir+"/"+dataname;
         fsex.copySync(savefilename, copyfilename);
+        alert('finised backup ' +  copyfilename);
         return copyfilename;
+    },
+    getBackupList: function(){
+        return fs.readdirSync(backup_dir);
     }
-// };
+};
 function getDate(){
     var dt = new Date();
     return dt.getFullYear().toString() + "-" +dt.getMonth().toString() + "-" + dt.getDate().toString()

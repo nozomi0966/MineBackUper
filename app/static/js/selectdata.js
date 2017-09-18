@@ -4,6 +4,7 @@ function getGemedataName() {
     return data;
 }
 function startButton() {
+    makeBackuplist();
     var x = document.createElement("SELECT");
     x.setAttribute("id", "gamedata");
     document.body.appendChild(x);
@@ -24,7 +25,7 @@ function setOptinon(value, text) {
 }
 function makeButton() {
     var selectedbutton = document.createElement("BUTTON");
-    var t = document.createTextNode("select");
+    var t = document.createTextNode("make backup data");
     selectedbutton.setAttribute("id", 'selectbutton');
     selectedbutton.onclick = function () {
         copyBackup('gamedata');
@@ -35,6 +36,22 @@ function makeButton() {
 function copyBackup(id) {
     var selectedName = document.getElementById(id).value;
     const backup = require("../../src/main/Backup.js");
-    console.log(selectedName);
+    backup.copyData(selectedName);
+    // console.log(selectedName);
 }
- 
+ function makeBackuplist(){
+    const data = require("../../src/main/Backup.js");
+    const backuplist = data.getBackupList();
+    backuplist.map(function (e) {
+        var backuplist = document.getElementById('backuplist');
+        var backuplistul = document.getElementById('backuplistul');
+        console.log(e);
+        var z = document.createElement("li");
+        var t = document.createTextNode(e);
+        z.appendChild(t)
+        z.setAttribute("id", 'backuplistli');
+        backuplistul.appendChild(z);
+        backuplist.appendChild(backuplistul);
+        document.body.appendChild(backuplist);
+    });
+}
