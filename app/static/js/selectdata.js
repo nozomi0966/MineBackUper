@@ -34,6 +34,7 @@ function makeButton() {
 }
 function copyBackup(id) {
     var selectedName = document.getElementById(id).value;
+    const backup = require("../../src/main/Backup.js");
     console.log(selectedName);
 }
  
